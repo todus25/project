@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+      <head>
+       <title>list</title>
+	   
+	   <style>
+	   
+	   p{font-size:.7cm;}
+	   select{height:.7cm;
+	          font-size:.5cm;
+			  font-style:italic;
+			  }
+			  
+		#e{
+		text-align:center;
+		   height:3cm;
+            width:40%;
+             margin-top:8cm;
+              margin-left:3cm;	
+          font-size:.9cm;	
+		   box-shadow: 10px 10px 5px grey;}
+         #x{height:1cm;
+		    width:35%;
+			margin-left:30%;
+			border:1px solid black;
+			 text-align:center;
+			 font-size:.8cm;
+			 }   
+			  
+	   </style>
+	   
+	   
+	   
+	    </head>
+	   
+	   <body>
+              <form>
+			        <p>Choose Your Keyword:
+					   <select id="mySelect" onchange="myFunction()">
+					   <option></option>
+					   <option >Update</option>
+					   <option >Info</option>
+					   <option >Success</option>
+					   <option >Danger</option>
+					  </option>
+                       </select>
+					     </p>
+<div id="x"></div>
+              </form>
+			 
+	   
+	   <div id="e" hidden >
+	   
+	   
+	   </div>
+	   
+	   
+	   <script> function another(){document.getElementById("e").style.display='none';}
+	   
+	            function myFunction() { var v = ["Info","Success","Update","Danger"];
+				
+				document.getElementById("e").style.display='block';
+				
+    var x = document.getElementById("mySelect").value;
+	if(x==v[2]){  document.getElementById("e").innerHTML = "***Update Computer***"+" </br>  "+"Wash Your Software";
+	                document.getElementById("x").innerHTML ="Wash Your Software";
+	document.getElementById("e").style.background='yellow';
+	document.getElementById("e").style.color='green';}
+	
+	if(x==v[0]){ document.getElementById("e").innerHTML = "***Info or Cash***"+" </br>  "+"Its time to Read";
+                document.getElementById("x").innerHTML ="Its time to Read"; 
+	document.getElementById("e").style.background='grey';
+	document.getElementById("e").style.color='white';}
+	
+	if(x==v[3]){ document.getElementById("e").innerHTML = "***Danger!!Danger!!!!***"+" </br>  "+"Stay Out";
+	document.getElementById("e").style.background='red';
+	document.getElementById("e").style.color='black';
+	document.getElementById("x").innerHTML ="Stay Out";}
+	
+	if(x==v[1]){    document.getElementById("e").innerHTML = "***Success is Costly***"+" </br>  "+"Remember Failure is the pillar";
+	document.getElementById("e").style.background='green';
+	document.getElementById("e").style.color='white';
+	document.getElementById("x").innerHTML ="Remember Failure is the pillar";}
+	setTimeout(another, 3000);
+	}
+	   
+	   </script>
+	   </body>
+	   </html>
+	   
+	   
+	   
